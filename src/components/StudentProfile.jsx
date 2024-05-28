@@ -71,6 +71,20 @@ export default function StudentProfile() {
   const handleImageChange = (e) => {
     setProfilePicture(e.target.files[0]);
   };
+  const handleLogout = async () => {
+    try {
+      const token = localStorage.getItem('accessToken');
+      await axios.post('http://127.0.0.1:8000/auth/logout/', {}, {
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
+      });
+      localStorage.removeItem('accessToken');
+      window.location.href = '/SignIn';
+    } catch (error) {
+      console.error('Error logging out:', error);
+    }
+  };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -122,9 +136,9 @@ export default function StudentProfile() {
                 <a href='/'>Home</a>
               </MDBBreadcrumbItem>
               <MDBBreadcrumbItem>
-                <a href="#">Students</a>
+                <a href="#">Students Profile</a>
               </MDBBreadcrumbItem>
-              <MDBBreadcrumbItem active>User Profile</MDBBreadcrumbItem>
+              <MDBBreadcrumbItem active><MDBBtn onClick={handleLogout}>Logout</MDBBtn></MDBBreadcrumbItem>
             </MDBBreadcrumb>
           </MDBCol>
         </MDBRow>
