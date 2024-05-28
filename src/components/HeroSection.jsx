@@ -1,6 +1,3 @@
-
-
-import quran_image from '../assets/quran-image.png'
 export default function HeroSection() {
   return (
     <>
@@ -12,11 +9,11 @@ export default function HeroSection() {
             </h1>
 
             <p className='hero-section-p '>
-              Hire Quran teachers on monthly basis and learn online from anywhere in the world. Suitable and safe for children and adults.
+              Hire Quran teachers on monthly basis and learn online from anywhere in the world. it is a safe platform for children and women.
             </p>
           </div>
           <div className="col-lg-6">
-            <img src={quran_image} alt="hero-banner image" className='hero-banner-image ' />
+            <img src='https://images.unsplash.com/photo-1609599006353-e629aaabfeae?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cXVyYW58ZW58MHx8MHx8fDA%3D' alt="hero-banner image" className='hero-banner-image rounded-8' />
           </div>
         </div>
       </div>

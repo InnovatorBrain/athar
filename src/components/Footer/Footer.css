@@ -1,4 +1,5 @@
 .Footer_Container {
+    z-index: 1000;
     margin: 3rem 4rem;
     display: flex;
     flex-direction: row;

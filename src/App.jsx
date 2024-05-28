@@ -9,6 +9,7 @@ import Login from './pages/Login';
 import Footer from './components/Footer/Footer';
 import Signup from './pages/Signup';
 import Headings from './components/PageNotFount/PageNotFount';
+import ProfileStatistics from './pages/TeachersCard';
 
 // Profile
 import StudentProfile from './components/StudentProfile';
@@ -26,6 +27,7 @@ function App() {
         <Route path='/contact' element={<Contact />} />
         <Route path='/login' element={<Login />} />
         <Route path='/signup' element={<Signup />} />
+        <Route path='/Teachers' element={<ProfileStatistics />} />
         {/* Athenticated Users */}
         <Route element={<PrivateRoutes />}>
           <Route path="/dashboard" element={<div className="Dashboard-main-container">okies</div>} />

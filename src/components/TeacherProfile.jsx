@@ -91,7 +91,6 @@ export default function TeacherProfile() {
         axios.defaults.headers.common['Authorization'] = `Bearer ${token}`;
 
         try {
-            // Update profile picture only if there's a new one selected
             if (profilePicture) {
                 const pictureData = new FormData();
                 pictureData.append('image', profilePicture);
@@ -104,7 +103,6 @@ export default function TeacherProfile() {
                 address: formData.address
             });
 
-            // Update enrolled_date, grade, and parent_contact on auth/student/profile/
             await axios.post('http://127.0.0.1:8000/auth/teacher/profile/', {
                 subject: formData.subject,
                 experience: formData.experience,

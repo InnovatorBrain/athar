@@ -7,7 +7,7 @@ export default function Navbar() {
       <nav className="navbar navbar-expand-lg w-100 d-flex justify-content-between ">
         <div className="container  ">
           <Link to='/'>
-            <img src={logo} alt="" width='130px' height='34px' />
+            <img src={logo} alt="" width='250px' height='50px' />
           </Link>
           <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span className="navbar-toggler-icon"></span>
@@ -18,7 +18,7 @@ export default function Navbar() {
                 <Link className="nav-link" aria-current="page" to="/">Home</Link>
               </li>
               <li className="nav-item ">
-                <Link className="nav-link" to="#">Find Teachers</Link>
+                <Link className="nav-link" to="/Teachers">Find Teachers</Link>
               </li>
               
               <li className="nav-item">
