@@ -10,6 +10,10 @@ import Footer from './components/Footer/Footer';
 import Signup from './pages/Signup';
 import Headings from './components/PageNotFount/PageNotFount';
 
+// Profile
+import StudentProfile from './components/StudentProfile';
+
+
 function App() {
   return (
     <BrowserRouter>
@@ -18,11 +22,13 @@ function App() {
         <Route path='/' element={<Home />} />
         {/* <Route path='/resources' element={<Resources />} /> */}
         <Route path='/faqs' element={<Faq />} />
+        <Route path='/contact' element={<Contact />} />
         <Route path='/login' element={<Login />} />
         <Route path='/signup' element={<Signup />} />
+        {/* Athenticated Users */}
         <Route element={<PrivateRoutes />}>
           <Route path="/dashboard" element={<div className="Dashboard-main-container">okies</div>} />
-          <Route path='/contact' element={<Contact />} />
+          <Route path='/student-pro' element={<StudentProfile />} />
         </Route>
         <Route path="*" element={
           <div className='404Page'>
