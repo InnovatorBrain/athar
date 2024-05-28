@@ -12,6 +12,7 @@ import Headings from './components/PageNotFount/PageNotFount';
 
 // Profile
 import StudentProfile from './components/StudentProfile';
+import TeacherProfile from './components/TeacherProfile';
 
 
 function App() {
@@ -29,6 +30,7 @@ function App() {
         <Route element={<PrivateRoutes />}>
           <Route path="/dashboard" element={<div className="Dashboard-main-container">okies</div>} />
           <Route path='/student-pro' element={<StudentProfile />} />
+          <Route path='/teacher-pro' element={<TeacherProfile />} />
         </Route>
         <Route path="*" element={
           <div className='404Page'>

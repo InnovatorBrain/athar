@@ -15,7 +15,7 @@ import {
   MDBInput
 } from 'mdb-react-ui-kit';
 
-export default function StudentProfile() {
+export default function TeacherProfile() {
   const [profile, setProfile] = useState({});
   const [studentProfile, setStudentProfile] = useState({});
   const [loading, setLoading] = useState(true);
