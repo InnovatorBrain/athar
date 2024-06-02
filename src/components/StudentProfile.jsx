@@ -80,7 +80,7 @@ export default function StudentProfile() {
         },
       });
       localStorage.removeItem('accessToken');
-      window.location.href = '/SignIn';
+      window.location.href = '/login';
     } catch (error) {
       console.error('Error logging out:', error);
     }

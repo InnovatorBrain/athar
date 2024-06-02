@@ -80,7 +80,7 @@ export default function TeacherProfile() {
             },
           });
           localStorage.removeItem('accessToken');
-          window.location.href = '/SignIn';
+          window.location.href = '/login';
         } catch (error) {
           console.error('Error logging out:', error);
         }
@@ -91,10 +91,11 @@ export default function TeacherProfile() {
         axios.defaults.headers.common['Authorization'] = `Bearer ${token}`;
 
         try {
+            // Update profile picture only if there's a new one selected
             if (profilePicture) {
-                const pictureData = new FormData();
-                pictureData.append('image', profilePicture);
-                await axios.post('http://127.0.0.1:8000/auth/profile/picture/', pictureData);
+              const pictureData = new FormData();
+              pictureData.append('image', profilePicture);
+              await axios.post('http://127.0.0.1:8000/auth/profile/picture/', pictureData);
             }
 
             // Update bio and address on auth/profile/

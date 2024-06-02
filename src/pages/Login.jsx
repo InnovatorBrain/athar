@@ -25,7 +25,7 @@ export default function Login() {
         if (response.status === 200) {
             localStorage.setItem('accessToken', response.data.token.access);
             localStorage.setItem('refreshToken', response.data.token.refresh);
-            window.location.href = '/dashboard';
+            window.location.href = '/teacher-pro';
         } else {
             setError('Login failed. Please try again.');
         }
